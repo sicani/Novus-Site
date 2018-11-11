@@ -20,12 +20,12 @@
 
  /* Styling to break each section into the viewport height */
 #intro, #desres, #bvalues, #info, #drawings, #desplan, #attributes, #studies {
-	height: 100vh;
+	min-height: 100%;
 	margin: 10px;
 }
 
 #studies	{
-	margin-bottom: 50vh;
+	margin-bottom: 50px;
 }
 
 #info, #desplan, #attributes, #studies, #drawings	{
@@ -378,11 +378,13 @@ h4.colors	{
 }
 
 
+
 /* Illustration Animation */
 #bedroom, #glasshouse, #lounge, #kitchen	{
 	stroke-dashoffset: 1500;
 	stroke-dasharray: 1500;
 	opacity: 1;
+
 }
 
 #front, #back, #middle, #windows, #entry	{
@@ -404,6 +406,8 @@ h2.sub-header.animation-element.in-view	{
 	animation: fadeIn2 1s 0s ease 1 forwards;
 	opacity: 0;
 }
+
+
 
 /* Animations ----------------------------------- */
 
@@ -428,4 +432,6 @@ h2.sub-header.animation-element.in-view	{
 	33%	{transform: translateY(0);}
 	100%{transform: translateY(-200px);}
 }
+
+
 	
