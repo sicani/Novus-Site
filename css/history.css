@@ -391,8 +391,8 @@ h4.colors	{
 	opacity: 1;
 }
 
-.draw-in.animation-element.in-view	{
-	animation: fillIn 5s 1s linear alternate infinite;
+.draw-in.animation-element.in-view	{ /* Animation for SVG drawings */
+	animation: fillIn 5s 1s linear 1 forwards;
 	opacity: 1;
 }
 
@@ -419,7 +419,7 @@ h2.sub-header.animation-element.in-view	{
 
 @keyframes fillIn	{
 	to	{
-	stroke-dashoffset: -1000;
+	stroke-dashoffset: 0;
 	}
 }
 
