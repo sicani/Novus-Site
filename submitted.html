@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <title>Novus : Purchase : Checkout</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">	
+    
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.css" rel="stylesheet">  
+    
+		<!-- JQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>  
+    
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+      <p class="brand-name">Novus</p>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active-link" href="purchase.html">Purchase : Checkout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="development.html">Development</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1 class="intro-text">Checkout</h1>
+              <h2 class="subheading">The final step.</h2>
+            </div>
+          </div>
+        </div>
+    </header>
+	
+	<!-- Modal Pop-up-->
+	<div id="#thank-you" class="menu">
+	      <div class="icon-close">
+        <p class="close" style="color: rgb(239,64,54); opacity:1;">x</p>
+		</div>
+	  <div class="col-lg-8 col-md-10 mx-auto thanks">
+		<h2 class="room-title">Thank you.</h2>
+			<p class="thanks-text">Your purchase will be processed shortly.</p>
+			<p class="thanks-text">We appreciate your business and hope to see you at our community soon.</p>
+			<a class="return-home" href="index.html">Home Page</a>
+	  </div>
+	</div>
+
+    <!-- Post Content -->
+	<div class="container">
+		<div class="col-lg-8 col-md-10 mx-auto">
+				<h2 class="room-title">Complete Your Purchase</h2>
+				<h4 id="prices" class="room-leadin"></h4>
+				
+<form action="" id="priceform" onsubmit="return false;">
+ <div class="room-type">
+   <fieldset>
+    <label >Select Your Room Type</label><br>
+    <input type="radio"  name="selectedroom" value="Room1"
+    onclick="calculateTotal()" />
+    Single Room : $194.99<br>
+    <input type="radio"  name="selectedroom" value="Room2"
+    onclick="calculateTotal()" />
+    Double Room : $349.99<br>
+    <input type="radio"  name="selectedroom" value="Room3"
+    onclick="calculateTotal()" />
+    Superior Room : $749.99<br>
+  </div>
+
+  <div class="day-amounts">
+    <label>How many days would you like to book your room?</label>
+	<br>
+    <select id="days" name='daysAmount'
+    onchange="calculateTotal()">
+    <option value="1">1 Day</option>
+    <option value="2">2 Days</option>
+    <option value="3">3 Days</option>
+    <option value="4">4 Days</option>
+    <option value="5">5 Days</option>
+    <option value="6">6 Days</option>
+    <option value="7">1 week</option>
+    <option value="8">8 Days</option>
+    <option value="9">9 Days</option>
+    <option value="10">10 Days</option>
+    <option value="11">11 Days</option>
+    <option value="12">12 Days</option>
+    <option value="13">13 Days</option>
+    <option value="14">2 Weeks</option>
+   </select>
+    <br/>
+    <h2 class="room-rate total">Total Amount Due:</h2>
+    <h4 id="totalPrice" class="room-price">$0.00</h4>
+    </fieldset>
+</form>
+	<a class="icon-menu" href="#thank-you">Confirm Purchase</a>
+</div>
+  </div><!-- Closes container -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p id="feet" class="copyright slated">Copyright &copy; Novus 2017-2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

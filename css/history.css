@@ -1,0 +1,431 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaBT/typefaces/FuturaBT-Book.otf');
+}
+
+@font-face	{
+	font-family: 'FuturaCond';
+	src: url('fonts/FuturaBT/typefaces/FuturaBT-CondMedium.otf');
+}
+
+@font-face	{
+	font-family: 'Bodoni';
+	src: url('fonts/Bodoni.otf');
+}
+
+@font-face	{
+	font-family: 'Bodoni-IT';
+	src: url('fonts/BodoniStd-BoldItalic.otf');
+}
+
+ /* Styling to break each section into the viewport height */
+#intro, #desres, #bvalues, #info, #drawings, #desplan, #attributes, #studies {
+	height: 100vh;
+	margin: 10px;
+}
+
+#studies	{
+	margin-bottom: 50vh;
+}
+
+#info, #desplan, #attributes, #studies, #drawings	{
+	padding-top: 130px;
+}
+
+h1.hist-title	{
+	font-family: 'Bodoni-IT';
+	color: rgb(239,64,54);
+	font-weight: 500;
+	font-size: 45px;
+}
+
+p.hist-body	{
+	font-family: 'FuturaCond';
+	color: rgb(65,65,65);
+	width: 80%;
+	font-weight: 300;
+	margin-bottom: -10px;
+	font-size: 17px;
+}
+
+img.panel	{
+	background-color: rgb(239,64,54);
+	margin-top: 10%;
+	width: 66%;
+	float: left;
+	padding: 10px 0 10px 90px;
+}
+
+div.row	{
+	margin-bottom:100px;
+}
+
+.right-align	{
+	text-align: right;
+}
+
+.fl-right	{
+	float: right;
+}
+
+h2.sub-header	{
+	font-family: 'Futura', sans-serif;
+	font-size: 30px;
+	width: 60%;
+	color: rgb(65,65,65);
+	margin-top: -30px;
+	padding-top: 50px;
+}
+
+h1.hist-title.research	{
+	margin-bottom: -200px;
+}
+
+#intro, #desres, #intro, #bvalues	{
+	padding-top: 100px;
+}
+
+/* Initial menu */
+.sidemenu {
+  top: 0;
+  background-color: white;
+  left: -200px;  /* start off behind the scenes */
+  height: 100% !important;
+  position: fixed;
+  width: 200px;
+  z-index: 95;
+  -webkit-box-shadow: 1px 3px 4px rgba(135,135,135, .333);
+  -moz-box-shadow: 1px 3px 4px rgba(135,135,135, .333);
+  box-shadow: 1px 3px 4px rgba(135,135,135, .333);
+}
+
+/* Basic styling */
+.sidemenu ul {
+  list-style: none;
+  margin-top: 75px;
+  padding: 0;
+}
+
+.sidemenu li {
+  font-family: 'Futura', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.sidemenu a {
+  color: rgb(239,64,54);
+}
+
+.sidemenu p	{
+  color: black;
+}
+
+.sidemenu a, .sidemenu p {
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100% !important;
+  padding: 5px;
+}
+
+
+.sidemenu a:hover	{
+	background-color: rgb(239,64,54);
+	color: white;
+	transition: 0.25s;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding:0;
+}
+
+.icon-close:active, .icon-close:hover, .icon-close:focus	{
+	background-color: transparent !important;
+	color: black;
+}
+
+div.section-button	{
+	position: fixed;
+	top: 85px;
+	padding: 5px;
+	float: left;
+	background-color: white;
+  -webkit-box-shadow: 1px 3px 4px rgba(135,135,135, .333);
+  -moz-box-shadow: 1px 3px 4px rgba(135,135,135, .333);
+  box-shadow: 1px 3px 4px rgba(135,135,135, .333);
+  z-index: 90;
+	
+}
+
+a.icon-menu {
+  color: rgb(239,64,54) !important;
+  cursor: pointer;
+  font-family: 'Futura', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 5px;
+  padding-top: 25px;
+  text-decoration: none;
+  background-color: transparent !important;
+}
+
+
+
+
+
+/* introduction */
+h1.hist-title.animation-element	{
+	opacity: 1;
+	color: white;
+}
+
+h1.hist-title.animation-element.in-view	{
+	animation: fadeIn 1s 0s ease 1 forwards;
+	opacity: 1;
+	color: rgb(239,64,54);
+}
+
+section.intro.animation-element	{
+	opacity: 0;
+}
+
+section.intro.animation-element.in-view	{
+	animation: fadeIn2 1s 750ms ease 1 forwards;
+	opacity: 0;
+
+}
+
+
+
+
+
+/* design research */
+.col-3.animation-element	{
+	text-align: left;
+	opacity: 0;
+}
+
+.col-3.animation-element.goal.in-view	{
+	animation: fadeIn2 1s 1s ease 1 forwards;
+	opacity: 0;
+}
+
+
+.col-3.animation-element.questions.in-view	{
+	animation: fadeIn2 1s 1.25s ease 1 forwards;
+	opacity: 0;
+}
+
+.col-3.animation-element.assumptions.in-view	{
+	animation: fadeIn2 1s 1.5s ease 1 forwards;
+	opacity: 0;
+}
+
+.col-3.animation-element.objective.in-view	{
+	animation: fadeIn2 1s 1.75s ease 1 forwards;
+	opacity: 0;
+}
+
+/* Information */
+.col-4.animation-element, .col-lg-4.animation-element	{
+	opacity: 0;
+}
+
+.col-4.animation-element.vf.in-view	{
+	animation: fadeIn2 1s 1s ease 1 forwards;
+	opacity: 0;
+}
+
+.col-4.animation-element.qing.in-view	{
+	animation: fadeIn2 1s 1.25s ease 1 forwards;
+	opacity: 0;
+}
+
+.col-lg-4.animation-element.inchina.in-view	{
+	animation: fadeIn2 1s 1.5s ease 1 forwards;
+	opacity: 0;
+}
+
+
+
+
+
+/* Brand Values */
+.col-6.fl-right.animation-element, .col-6.animation-element	{
+	opacity: 0;
+}
+
+.col-6.fl-right.animation-element.in-view	{
+	animation: fadeIn2 1s 1s ease 1 forwards;
+}
+
+.col-6.animation-element.in-view	{
+	animation: fadeIn2 1s 1.5s ease 1 forwards;
+}
+
+
+
+
+
+
+/* Attributes Section */
+
+.col-6.animation-element.attr1, .col-6.animation-element.attr2	{
+	opacity: 0;
+}
+
+.col-6.animation-element.attr1.in-view	{
+	animation: fadeIn2 1s 0s ease 1 forwards;
+	opacity: 0;
+}
+
+.col-6.animation-element.attr2.in-view	{
+	animation: fadeIn2 1s 0.75s ease 1 forwards;
+	opacity: 0;
+}
+
+
+
+
+
+/* Color and Type Study Section */
+
+#red, #slate, #black, #white	{
+	overflow: hidden;
+}
+
+h3.overlay-color	{
+	color: white;
+	font-family: 'FuturaCond', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 120px; 
+}
+
+h3.overlay-color2	{
+	color: black;
+	font-family: 'FuturaCond', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 120px; 
+}
+
+h3.overlay-color.animation-element, h3.overlay-color2.animation-element	{
+	animation: slide 4s 0s ease infinite forwards;
+}
+	
+
+#red	{
+	background: rgb(239,64,54);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	margin: 40px 0 20px 0;
+}
+
+#slate	{
+	background: rgb(65,65,65);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	margin: 40px 0 20px 0;
+}
+
+#black	{
+	background: black;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	margin: 40px 0 20px 0;
+}
+
+#white	{
+	background: white;
+	border-style: solid;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	width: 119px;
+	height: 119px;
+	margin: 40px 0 20px 0;
+}
+
+h4.colors	{
+	font-family: 'Futura', Helvetica, Arial, sans-serif;
+	color: rgb(65,65,65);
+	font-size: 18px;
+	display: block;
+	margin-bottom: -15px;
+}
+
+#Futura, #Bodoni, #FuturaCond	{
+	stroke-dashoffset: 1000;
+	stroke-dasharray: 1000;
+	opacity: 1;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+
+/* Illustration Animation */
+#bedroom, #glasshouse, #lounge, #kitchen	{
+	stroke-dashoffset: 1500;
+	stroke-dasharray: 1500;
+	opacity: 1;
+}
+
+#front, #back, #middle, #windows, #entry	{
+	stroke-dashoffset: 1800;
+	stroke-dasharray: 1800;
+	opacity: 1;
+}
+
+.draw-in.animation-element.in-view	{
+	animation: fillIn 5s 1s linear alternate infinite;
+	opacity: 1;
+}
+
+h2.sub-header.animation-element	{
+	opacity: 0;
+}
+
+h2.sub-header.animation-element.in-view	{
+	animation: fadeIn2 1s 0s ease 1 forwards;
+	opacity: 0;
+}
+
+/* Animations ----------------------------------- */
+
+@keyframes fadeIn	{
+	0%	{ color: white;}
+	100%{ color: rgb(239,64,54);}
+}
+
+@keyframes fadeIn2	{
+	0%	{ opacity: 0;}
+	100%{ opacity: 1;}
+}
+
+@keyframes fillIn	{
+	to	{
+	stroke-dashoffset: -1000;
+	}
+}
+
+@keyframes slide	{
+	0%	{transform: translateY(200px);}
+	33%	{transform: translateY(0);}
+	100%{transform: translateY(-200px);}
+}
+	

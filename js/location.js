@@ -1,0 +1,51 @@
+var $cont = document.querySelector('.cont');
+var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+//var $animation_elements = $('.animation-element ,.ms-animation-element, .bru-animation-element');
+//var $window = $(window);
+
+//function check_if_in_view() {
+ // var window_height = $window.height();
+  //var window_top_position = $window.scrollTop();
+ // var window_bottom_position = (window_top_position + window_height);
+
+  //$.each($animation_elements, function() {
+   // var $element = $(this);
+   // var element_height = $element.outerHeight();
+   // var element_top_position = $element.offset().top;
+   // var element_bottom_position = (element_top_position + element_height);
+
+    //check to see if this current container is within viewport
+   // if ((element_bottom_position >= window_top_position) &&
+   //   (element_top_position <= window_bottom_position)) {
+  //    $element.addClass('in-view');
+  //  } else {
+  //    $element.removeClass('in-view');
+  //  }
+ // });
+//}
+
+setTimeout(function() {
+  $cont.classList.remove('s--inactive');
+}, 200);
+
+$elsArr.forEach(function($el) {
+  $el.addEventListener('click', function() {
+    if (this.classList.contains('s--active')) return;
+    $cont.classList.add('s--el-active');
+    this.classList.add('s--active');
+  });
+});
+
+//$window.on('scroll resize', check_if_in_view);
+//$window.trigger('scroll');
+
+$closeBtnsArr.forEach(function($btn) {
+  $btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    $cont.classList.remove('s--el-active');
+    document.querySelector('.el.s--active').classList.remove('s--active');
+  });
+});
+
+
